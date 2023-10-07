@@ -1,0 +1,35 @@
+version: '3'
+services:
+  vite-app:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000" 
+
+  node-backend:
+    build:
+      context: ./backend
+    ports:
+      - "3001:3001"
+  mysql:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: vueDockerDatabase
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 1234
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  adminer:
+    image: adminer:latest
+    container_name: adminer_container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+volumes:
+  mysql_data:
