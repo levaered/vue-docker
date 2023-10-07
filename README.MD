@@ -8,11 +8,7 @@ Before you begin, make sure you have Docker and Docker Compose installed on your
 
 ## Installation and Usage
 
-1. Clone this repository:
-
-   ```shell
-   git clone https://github.com/yourusername/your-web-app.git
-   cd your-web-app
+1. Clone this repository
 
 2. Install Modules
 
