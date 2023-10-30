@@ -12,6 +12,7 @@ Before you begin, make sure you have Docker and Docker Compose installed on your
 
 2. Install Modules
 
+    cd frontened
     npm i
 
 3. Build the Docker images:
